@@ -425,8 +425,9 @@ SELECT branchNo, COUNT(*) AS agentCount, AVG(salary) AS avgSalary FROM Agents WH
 ```
 
 ~~SELECT branchNo, COUNT(*) AS agentCount, AVG(salary) AS avgSalary FROM Agents WHERE state IN ('NY', 'CA') AND avgSalary >= 40000 GROUP BY branchNo;~~
-Note:
-In SQL, you can't directly use aggregate functions like `AVG()` in the `WHERE` clause.
+
+Note:  
+In SQL, you can't directly use aggregate functions like `AVG()` in the `WHERE` clause.  
 Instead, you should use the `HAVING` clause to **filter** the results after grouping. The `HAVING` clause is specifically designed to work with aggregate functions to **filter grouped results**.
 
 branchNo | agentCount | avgSalary
