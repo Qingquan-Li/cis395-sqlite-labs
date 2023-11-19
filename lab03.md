@@ -329,6 +329,10 @@ Note:
 This query is to perform a `LEFT OUTER JOIN` and will include all branches, regardless of whether they have corresponding staff members.
 `ON` versus `WHERE`: the `ON` clause is used to specify how the tables are to be joined - that is, the condition that relates the two tables. The `WHERE` clause, on the other hand, is used to filter the results after the join has been performed.
 
+Disambiguate Column Names: Whenever you have the same column name in multiple tables (e.g., same column names `branchNo`, `address`, `city`, `state` in both table `Branch` and table `Staff`) that are part of your query, you must disambiguate them by using either the full table name or an alias.
+
+Good Practices: Use Aliases for Clarity: In complex queries, especially those involving multiple tables, it's a good practice to use table aliases and prefix your column names with these aliases. It makes your queries more readable and clear.
+
 branchNo | address | city | state | fName | lName | position
 ---------|---------|------|-------|-------|-------|---------
 B006|1471 Jerrold Ave|Philadelphia|PA|||
